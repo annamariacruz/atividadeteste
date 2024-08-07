@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário - Roblox</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>\
+    <header class="header">
+        <div class="distancia">
+        <h1>Roblox Brasil</h1>
+        <img class="logo" src="midias/logo.png" alt="Logo do Roblox" id="logo" style="width: 50px; height: 50px;"/>
+    <nav>
+        <ul>
+            <li><a href="index.html" rel="noopener noreferrer">Início</a></li>
+            <li><a href="gallery.html" rel="noopener noreferrer">Galeria</a></li>
+            <li><a href="form.html" rel="noopener noreferrer">Formulário</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2>Preencha o Formulário</h2>
+            <form id="contact-form">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required> <br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required> <br>
+
+                <label for="age">Idade:</label>
+                <input type="number" id="age" name="age" required> <br>
+
+                <label for="state">Estado:</label>
+                <select id="state" name="state" required>
+                    <option value="" disabled selected>Escolha um estado</option>
+                    <option value="sp">São Paulo</option>
+                    <option value="rj">Rio de Janeiro</option>
+                    <option value="mg">Minas Gerais</option>
+                    <option value="es">Espírito Santo</option>
+                </select> <br>
+
+                <label for="city">Cidade:</label>
+                <select id="city" name="city" required>
+                    <option value="" disabled selected>Escolha uma cidade</option>
+                    <option value="sp">São Paulo</option>
+                    <option value="piri">Pirituba</option>
+                    <option value="sjc">São José dos Campos</option>
+                    <option value="cam">Campinas</option>
+                </select>  <br>
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" required oninput="validatePassword()"><br>
+                <label for="senhaRepetida">Digite novamente:</label>
+                <input type="password" id="senhaRepetida" name="senhaRepetida" required oninput="validatePassword()"><br><br>
+                <div class="password-validation">
+                    <ul>
+                        <li id="length">Pelo menos 8 caracteres</li>
+                        <li id="uppercase">Pelo menos uma letra maiúscula</li>
+                        <li id="special">Pelo menos um caractere especial</li>
+                        <li id="number">Pelo menos um número</li>
+                    </ul>
+                </div>
+
+                <div class="password-match" id="passwordMatch">As senhas devem coincidir.</div><br><br>
+
+              <label for="mensagem">Mensagem:</label><br>
+              <textarea id="mensagem" name="mensagem" rows="4" cols="50" maxlength="200" oninput="updateCharCount()"></textarea><br><br>
+              <div class="char-counter" id="charCounter">0/200 caracteres</div>
+              <div class="error-message" id="errorMessage"></div><br><br>>
+
+              <label for="interesse">Interesses:</label><br>
+              <input type="checkbox" id="interesse1" name="interesse1" value="jogos">
+              <label for="interesse1"> Jogos</label><br>
+              <input type="checkbox" id="interesse2" name="interesse2" value="criatividade">
+              <label for="interesse2"> Criatividade</label><br>
+              <input type="checkbox" id="interesse3" name="interesse3" value="comunidade">
+              <label for="interesse3"> Comunidade</label><br><br>
+              
+              <p>Qual o seu mini game favorito?</p> 
+            <select name="" id="">
+                <option value="">Murder mystery 2</option>
+                <option value="">Brookhaven</option>
+                <option value="">Flee the Facility</option>
+                <option value="">Da hood</option>
+                <option value="">Evade</option>
+                <option value="">Piggy</option>
+
+                <input type="submit" value="Enviar"> <br>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Roblox Site. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="./senha.js"></script>
+
+</body>
+</html>
